@@ -3,7 +3,7 @@
 This will be the Repository for the R script to perform a meta-analysis in the field of Minor Stroke.
 
 The plan is to use the 
-- dmetar, meta, and Medford packages
+- dmetar, meta, and metafor packages
 - Random effects model
 - Mantel-Haenzel method
 
