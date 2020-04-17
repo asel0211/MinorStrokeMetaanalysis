@@ -22,9 +22,11 @@ When you click the **Knit** button a document will be generated that includes bo
 #install.packages("metafor")
 #open software metafor
 library(metafor)
-dat <- data.frame(model=c("melbourne","paris","oxford","stanford","ottawa","new zealand"),
-xi=c(7,7,6,2,31,2), 
-ni=c(468,296, 281,223,982,172))
+
+# Create the dataframe
+dat <- data.frame(model=c("a","b","c"),
+xi=c(), 
+ni=c()
 dat$pi <- with(dat, xi/ni)
 dat <- escalc(measure="PFT", xi=xi, ni=ni, data=dat, add=0)	
 res <- rma(yi, vi, method="REML", data=dat, slab=paste(model))
