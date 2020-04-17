@@ -12,3 +12,5 @@ The plan is to use the
 
 I will measure heterogeneity by calculating Q, I^2, and tau-squared.
 A metaregression will be performed if there is high heterogeneity.
+
+The underlying code and overall supervision is provided by gntem2.
