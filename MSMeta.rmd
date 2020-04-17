@@ -31,7 +31,11 @@ dat$pi <- with(dat, xi/ni)
 
 # Freeman-Tukey double arcsine transformed proportion (Freeman & Tukey, 1950).	
 dat <- escalc(measure="PFT", xi=xi, ni=ni, data=dat, add=0) 
+
+# Fit the general linear (mixed-effects) model via restricted maximum likelihood (REML) estimation
 res <- rma(yi, vi, method="REML", data=dat, slab=paste(model))
+
+# Generate a forest plot
 forest(res, transf=transf.ipft.hm, targs=list(ni=dat$ni), xlim=c(-1,1.5),refline=0.020,cex=.8, ilab=cbind(dat$xi, dat$ni),
        ilab.xpos=c(-.6,-.4),digits=3)
 op <- par(cex=.75, font=2)
